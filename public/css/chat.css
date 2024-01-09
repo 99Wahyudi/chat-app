@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.chat-container{
+    background-color: #9BA3EB;
+}
+
+.contact-box{
+    background-color: #646FD4;
+    border-bottom-left-radius: 0.25rem;
+    /* color: #F6F6C9; */
+}
+
+.contact{
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    /* background-color: red; */
+    /* padding:0 10px !important; */
+}
+
+.contact::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background-color: #293462;
+    z-index: 1;
+    box-sizing: border-box;
+    right: -30%;
+    bottom: -6px;
+    border-radius: 2px;
+}
+
+.contact::before{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 1.5px;
+    /* border-bottom: 0.5 solid #293462; */
+    background-color: #293462;
+    z-index: 2;
+    box-sizing: border-box;
+    left: 2px;
+    bottom: -4px;
+    border-radius: 2px;
+}
+
+
+
+.chat-box{
+    background-color: #293462;
+    min-height: 200px;
+    max-height: 500px !important;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.chat{
+    width: 24rem;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* border: 0.3px solid #9BA3EB; */
+    /* background-color: #9BA3EB; */
+}
+
+
+.message-box{
+    background-color: #293462;  
+    position: relative;
+    /* border: 0.3px solid #9BA3EB; */
+}
+.message-box::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    right: 0;
+    top: 0%;
+    background-color: #9BA3EB;
+    height: 3px;
+    border-radius: 1px;
+}
+
+.message-box form{
+    display: inline-block !important;
+    margin: auto !important;
+}
+.message-box form input{
+    width: 400px !important;
+}
+
+
+.submit{
+    background-color: #9BA3EB !important;
+    border-color: #9BA3EB !important;
+    color: black;
+}
+
+.submit:hover{
+    background-color: #7d84ba !important;
+    color: black;
+}
+
+
+
+
+
+
+.chat-box::-webkit-scrollbar{
+    width: 10px;
+    z-index: 1;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 163, 235, 0.4);
+    border-radius: 5px;
+  }
+
+.chat-box::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    border-radius: 10px;
+}

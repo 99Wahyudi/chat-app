@@ -1,0 +1,40 @@
+.auth-container{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden !important;
+    /* background-color: aquamarine; */
+}
+
+.square{
+    width: 120vh;
+    height: 120vh;
+    background-image: linear-gradient(225deg, #9BA3EB, #293462);
+    position: fixed;
+    right: -10%;
+    top: -15%;
+    border-radius: 2rem;
+    transform: rotate(15deg);
+    z-index: -1;
+
+}
+
+.form-container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(244, 244, 244, .8);
+}
+
+.submit{
+    background-color: #9BA3EB !important;
+    border-color: #9BA3EB !important;
+    color: black;
+}
+
+.submit:hover{
+    background-color: #7d84ba !important;
+    color: black;
+}
+

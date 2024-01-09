@@ -1,0 +1,47 @@
+<div class="row col-md-8 col-sm-10 mx-auto mt-5 px-0 rounded chat-container">
+    <div class="nav pt-3 pb-1 mb-0 px-4">
+        <a href="#" class="navbar-brand text-dark fw-bold">CHAT-APP</a>
+        <div class="ms-auto navbar-nav ">
+            <div class="mt-1 p-0 m-0">
+                <a href="/logout" class="text-dark nav-link">Logout <i class="bi bi-door-open-fill p-0"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row p-0 m-0 rounded">
+        <div class="col-3 mx-0 p-0 bg-danger h-100">
+            <div class="contact-box h-100 p-3 text-light">
+                <% users.forEach(user => { %>
+                    <div class="container mb-4 px-2">
+                        <div class="contact">
+                            <%- user.username %> 
+                        </div>
+                    </div> 
+                <% }) %>
+            </div>
+        </div>
+        <div class="col-9 mx-0 p-0">
+            <div class="chat-box p-3">
+                <% chats.forEach(chat => { %> 
+                    <div class="chat my-3 p-2 rounded text-light">
+                        <b class="sender d-inline-block mb-1"><%= chat.sender %> </b>
+                        <p class="fw-light"><%= chat.message %> </p>
+                        <div class="text-end m-0">
+                            <small class="text-secondary">23:00</small>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            <div class="message-box py-4 text-center">
+                <form action="/chat" method="post" class="d-inline-block mx-auto">
+                    <div class="input-group mb-3">
+                        <input type="text" name="message" class="form-control" id="message" placeholder="Type here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn submit" type="submit" id="submit">Send</button>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script src="/js/socket.io.js"></script>
+<script src="/js/main.js"></script>
